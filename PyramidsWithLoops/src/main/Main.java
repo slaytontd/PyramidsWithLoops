@@ -1,29 +1,38 @@
 /*
- * Bill Nicholson
- * nicholdw@ucmail.uc.edu
- * Printing pyramvccvcvcvcids using loops. It kind-of works. 
- * What I really want is
-        1
-       222
-      33333
-     4444444
-    555555555 
+ * Tom Slayton
+ * slaytotd@mail.uc.edu
+ * IS4010 App Dev with Java
+ * Fall 2019
+ * Pyramid built with loops increasing in number
+ * 
+ * 
 */
 package main;
 
 public class Main
 {
-
 	public static void main(String[] args) 
 	{
-		int lines = 343;
-		for (int i = 0; i < lines; i++)
+		int l = 5; // setting line numbers
+		int newLine = l; // declaring line number variable
+		
+		for (int i = 0; i < l; i++) // loop for pyramid
 		{
-			for (int j = 0; j < i+1; j++) 
+			for (int j = l-i; j > 1; j--) 
 			{
-				System.out.print(j);
+				System.out.print(" "); //loop for spaces to left of pyramid
 			}
-			System.out.println("");
+			
+			newLine = i + 1; //adding layer to pyramid 
+			
+			System.out.print(newLine); //allows first line to be just "1" instead of "11"
+			
+			for (int j=1; j<=i; j++)
+			{
+				System.out.print(newLine + ""+  newLine); //prints line with added increment
+			}
+			
+			System.out.println(" "); // goes to next line
 		}
-	}
+	}		
 }
