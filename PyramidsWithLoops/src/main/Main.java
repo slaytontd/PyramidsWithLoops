@@ -14,23 +14,24 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		int k = 5; // setting line numbers
-		int line_no = k; // declaring line number variable
+		int lines = 5; // setting line numbers
 		
-		for (int i = 0; i < k; i++) // loop for pyramid
+		int k = lines; // declaring line number variable
+		
+		for (int i = 0; i < lines; i++) // loop for pyramid
 		{
-			for (int j = k-i; j > 1; j--) 
+			for (int j = lines-i; j > 1; j--) 
 			{
-				System.out.print(" "); //loop for spaces to left of pyramid
+				System.out.print(" "); //loop for spaces to left of pyramid, i.e. 4 spaces before line 1, 3 spaces before line 2
 			}
 			
-			line_no = i + 1; //adding layer to pyramid 
+			k = i + 1; //adding first layer to pyramid 
 			
-			System.out.print(line_no); //allows first line to be just "1" instead of "11"
+			System.out.print(k); // first line just "1" instead of "11"
 			
 			for (int j=1; j<=i; j++)
 			{
-				System.out.print(line_no + ""+  line_no); //prints line with added increment
+				System.out.print(k + ""+  k); //prints line with added increment
 			}
 			
 			System.out.println(""); // goes to next line
