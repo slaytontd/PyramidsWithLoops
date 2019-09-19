@@ -15,7 +15,7 @@ public class Main
 	public static void main(String[] args) 
 	{
 		int k = 5; // setting line numbers
-		int no_Line = k; // declaring line number variable
+		int line_no = k; // declaring line number variable
 		
 		for (int i = 0; i < k; i++) // loop for pyramid
 		{
@@ -24,16 +24,16 @@ public class Main
 				System.out.print(" "); //loop for spaces to left of pyramid
 			}
 			
-			no_Line = i + 1; //adding layer to pyramid 
+			line_no = i + 1; //adding layer to pyramid 
 			
-			System.out.print(no_Line); //allows first line to be just "1" instead of "11"
+			System.out.print(line_no); //allows first line to be just "1" instead of "11"
 			
 			for (int j=1; j<=i; j++)
 			{
-				System.out.print(no_Line + ""+  no_Line); //prints line with added increment
+				System.out.print(line_no + ""+  line_no); //prints line with added increment
 			}
 			
-			System.out.println(" "); // goes to next line
+			System.out.println(""); // goes to next line
 		}
 	}		
 }
