@@ -3,7 +3,8 @@
  * slaytotd@mail.uc.edu
  * IS4010 App Dev with Java
  * Fall 2019
- * Pyramid built with loops increasing in number
+ * Pyramid built with loops
+ * 
  * 
  * 
 */
@@ -13,23 +14,23 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		int l = 5; // setting line numbers
-		int newLine = l; // declaring line number variable
+		int k = 5; // setting line numbers
+		int no_Line = k; // declaring line number variable
 		
-		for (int i = 0; i < l; i++) // loop for pyramid
+		for (int i = 0; i < k; i++) // loop for pyramid
 		{
-			for (int j = l-i; j > 1; j--) 
+			for (int j = k-i; j > 1; j--) 
 			{
 				System.out.print(" "); //loop for spaces to left of pyramid
 			}
 			
-			newLine = i + 1; //adding layer to pyramid 
+			no_Line = i + 1; //adding layer to pyramid 
 			
-			System.out.print(newLine); //allows first line to be just "1" instead of "11"
+			System.out.print(no_Line); //allows first line to be just "1" instead of "11"
 			
 			for (int j=1; j<=i; j++)
 			{
-				System.out.print(newLine + ""+  newLine); //prints line with added increment
+				System.out.print(no_Line + ""+  no_Line); //prints line with added increment
 			}
 			
 			System.out.println(" "); // goes to next line
