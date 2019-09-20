@@ -1,11 +1,11 @@
 /*
+ * 
+ * Assignment 04
  * Tom Slayton
- * slaytotd@mail.uc.edu
+ * Description: Pyramid built with loops
+ * Due Date: 9/26/19 8:00 AM
  * IS4010 App Dev with Java
- * Fall 2019
- * Pyramid built with loops
- * 
- * 
+ * mail: slaytotd@mail.uc.edu
  * 
 */
 package main;
@@ -14,27 +14,27 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		int lines = 5; // setting line numbers
-		
-		int k = lines; // declaring line number variable
-		
-		for (int i = 0; i < lines; i++) // loop for pyramid
-		{
-			for (int j = lines-i; j > 1; j--) 
+			int lines = 5;
+			int k = lines;
+			
+			for (int i = 0; i < lines; i++) //loop for pyramid
 			{
-				System.out.print(" "); //loop for spaces to left of pyramid, i.e. 4 spaces before line 1, 3 spaces before line 2
-			}
+				for (int j = lines - i; j > 1; j--) //white spaces to right of numbers 
+				{
+					System.out.print(" ");
+				}
 			
-			k = i + 1; //adding first layer to pyramid 
-			
-			System.out.print(k); // first line just "1" instead of "11"
-			
-			for (int j=1; j<=i; j++)
-			{
-				System.out.print(k + ""+  k); //prints line with added increment
-			}
-			
-			System.out.println(""); // goes to next line
+				k = i + 1;
+				System.out.print(k); // prints first numbers on left of layers 
+				
+				for (int j = 1; j <=i; j++)
+				{
+					System.out.print(k + ""+ k); //adds numbers to layer after first number
+				}
+				
+				System.out.println(""); //moves to next line
+				
 		}
 	}		
 }
+
