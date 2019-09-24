@@ -9,12 +9,11 @@
  * 
 */
 package main;
-
 public class Main
 {
 	public static void main(String[] args) 
 	{
-			int lines = 5;
+			int lines = 5; //defining size of pyramid 
 			int k = lines;
 			
 			for (int i = 0; i < lines; i++) //loop for pyramid
